@@ -39,8 +39,8 @@ exports.createPages = ({ graphql, actions }) => {
           node {
             frontmatter {
               path
-              draft
               date
+              cover
             }
             fields {
               slug

@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-julia",
+  "name": "eth.taxi",
   "private": true,
-  "description": "A minimal blog template built with Gatsby",
+  "description": "come take a ride",
   "version": "0.1.0",
-  "author": "Niklas Metje <hi@niklasmtj.de>",
+  "author": "acolytec3",
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
@@ -20,6 +20,7 @@
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-remark": "^2.7.1",
     "gatsby-transformer-sharp": "^2.4.4",
+    "gh-pages": "^2.2.0",
     "prism-themes": "^1.4.0",
     "prismjs": "^1.20.0",
     "prop-types": "^15.7.2",
@@ -41,7 +42,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",
