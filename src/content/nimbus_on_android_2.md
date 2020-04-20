@@ -2,7 +2,7 @@
 title: "Building Nimbus on Android: Part 2 / Eth 2"
 date: "2020-02-20"
 description: "Building an Eth2 client on a phone"
-cover: "clouds.jpg"
+cover: ./nimbus2/chain.jpg
 path: "/blog/nimbus_on_android_2"
 draft: false
 ---
@@ -34,16 +34,16 @@ Now, let's check and make sure we have the right version of Go installed since N
 
 Next, clone the Nimbus Beacon Chain repo.
 
-```
+```sh
 git clone https://github.com/status-im/nim-beacon-chain
 cd nim-beacon-chain> []
 ```
 
 Run `make` and Nimbus will compile and build out all the necessary internal Nim dependencies.  You should see the below message once everything is done.
-![Successfully installed Nimbus build dependencies](../images/image_1.jpg)
+![Successfully installed Nimbus build dependencies](./nimbus2/image_1.jpg)
 
 Now, like the instructions say, run `make` again to actually compile Nimbus for Eth 2.0.  Now, go grab a cup of coffee as this will take a while.  It took my OnePlus 6T something like 20-30 minutes to finally finish.  You should see this output once it's finished.
-![Successfully built Nimbus](../images/image_2.jpg)
+![Successfully built Nimbus](./nimbus2/image_2.jpg)
 
 ## Running Nimbus for Eth 2.0
 
@@ -60,12 +60,13 @@ This command will fire up a local Eth 2 network with 192 validators and 7 beacon
 
 Open a second terminal in Termux, and open the Ubuntu proot in this terminal as well. The below steps will set appropriate environment variables and start up the user beacon node referenced above.
 
-```cd nim-beacon-chain
+```sh
+cd nim-beacon-chain
 ./env.sh
 ./tests/simulation/run_node.sh 0 #
 ```
 Here you can see the user node starts up, joins the network, and starts getting blocks to sync the chain.
-![](image_3.jpg)
+![](./nimbus2/image_3.jpg)
 
 ### Running a Beacon Node on the Public Testnet
 
@@ -74,16 +75,16 @@ Now, let's talk to some other nodes.
 Run `make testnet0` to fire up your Nimbus beacon node and join testnet0. 
 
 Nimbus will prompt you for your Goerli Eth1 private key to to become a validator.
-![](image_4.jpg)
+![](./nimbus2/image_4.jpg)
 Just press `Enter` to skip for now as we're just going to run a beacon node.
 
 *drum roll*
 
-![](image_5.jpg)
+![](./nimbus2/image_5.jpg)
 
 We're off, genesis block received, block pool up and running, looking for peers.
 
-![](image_6.jpg)
+![](./nimbus2/image_6.jpg)
 
 Now we're making history, syncing blocks, participating in consensus, helping secure the network, enforcing fork choice rules, building the future, all from the comfort of a phone. 
 

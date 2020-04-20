@@ -2,7 +2,7 @@
 title: Building Nimbus on Android
 date: "2020-01-14"
 description: "Building an Eth client on a phone"
-cover: "chain.jpg"
+cover: ./nimbus/clouds.jpg
 path: "/blog/nimbus_on_android"
 draft: false
 ---

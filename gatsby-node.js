@@ -40,7 +40,6 @@ exports.createPages = ({ graphql, actions }) => {
             frontmatter {
               path
               date
-              cover
             }
             fields {
               slug

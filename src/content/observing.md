@@ -2,7 +2,7 @@
 title: Subspace - Observing DeFi
 date: "2020-03-20"
 description: "Building a simple defi dashboard with Subspace"
-cover: "starttrails.jpg"
+cover: ./observing/starttrails.jpg
 path: "/blog/observing_defi"
 draft: false
 ---

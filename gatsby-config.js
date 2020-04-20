@@ -6,6 +6,20 @@ module.exports = {
     author: `acolytec3`,
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 500,
+            }
+          }]
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -21,8 +35,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -30,10 +43,17 @@ module.exports = {
         plugins: [`gatsby-remark-reading-time`, {
           resolve: `gatsby-remark-prismjs`,
           options: {
-            aliases:{sh: "bash", js:"javascript"},
+            aliases: { sh: "bash", js: "javascript" },
             showLineNumbers: true,
           }
-        }],
+        },
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            maxWidth: 500,
+          }
+        }
+        ],
       },
     },
     {
