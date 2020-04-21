@@ -16,7 +16,7 @@ So, what is it?
 
 ## Arweave
 
-![Arweave logo](./logo_png.png)
+![Arweave logo](./armob1/logo_png.png)
 The first part of our portmanteau is [Arweave](https://www.arweave.org) - "a global, permanent hard drive."  In other words, at it's momst basic, Arweave is a blockchain project with a mission to provide a permanent archive of data.  Conceptually, you upload any sort of data of any sort, encrypted or not, and it will always be available to you (and everyone else) via some URL from any of the nodes on the network.  Don't think of Dropbox or Google Drive.  Think of it more like a decentralized version of the [Internet Archive](https://archive.org/web/) except that theoretically, the stuff you store on "the permaweb" as Arweave calls their variant of permanent data storage, can be encrypted so hopefully nobody other than you can access it.  Anyway, this isn't intended to be a full discourse on the nature of Arweave.  Suffice it to say, it's a blockchain that lets you permanently store data at relatively low cost (unlike say Ethereum where data storage is quite expensive).  Perhaps I'll revisit Arweave concepts more in a future post or three.
 
 ## Mobile
