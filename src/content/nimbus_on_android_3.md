@@ -1,10 +1,10 @@
 ---
 title: "Nimbus on Android: Part 3/Validatoring"
-date: "2020-04-202
+date: "2020-04-2020"
 description: "Let's finish this"
 cover: 
 path: "/blog/nimbus_on_android_3"
-draft: true
+draft: false
 ---
 
 Hi folks, it's been a while but it's time to finally wrap up the series on Nimbus on Android.  We left off in [Part 2](/blog/nimbus_on_android_2) with getting the Nimbus Eth2 beacon node up and running.  If it's been a while or if you're starting fresh, check out that post for how to get the environment set up and Nimbus built.
