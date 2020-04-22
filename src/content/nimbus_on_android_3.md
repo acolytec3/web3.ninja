@@ -1,6 +1,6 @@
 ---
 title: "Nimbus on Android: Part 3/Validatoring"
-date: "2020-04-20"
+date: "2020-04-22"
 description: "Let's finish this"
 cover: ./nimbus3/stamp.jpg
 path: "/blog/nimbus_on_android_3"
