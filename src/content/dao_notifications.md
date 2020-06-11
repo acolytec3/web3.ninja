@@ -1,6 +1,6 @@
 ---
 title: "DIY Aragon DAO Notifications - Powered by Subspace"
-date: "2020-06-010"
+date: "2020-06-10"
 description: "Staying on top of your DAO activities without surrendering your privacy"
 cover: ./dao_notifications/parker-johnson-v0OWc_skg0g-unsplash.jpg
 path: "/blog/dao_notifications"
@@ -35,7 +35,7 @@ And it is, but there's one gotcha, so let's step through setting up the Observab
 
 Let's look at the contract ABI and find the `StartVote` event.  First thing I did was go to my DAO's page on Aragon, click on the Organization link, and see the Apps listed.  Clicking on the "Voting" app gives me the Ethereum address of the voting contract and then over to Etherscan to get the ABI.  The problem I quickly discovered is...the only event I see on the contract is this one.  
 `[{"indexed":false,"name":"sender","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"ProxyDeposit","type":"event"}]`
-Looking at the contract events in Etherscan seems to confirm that these events line up with votes being created and cast by the DAO but the event names are meaningless.  The clue is the word "proxy" in the contract.  Aragon uses proxy contracts to ensure upgradeability and my DAO's contracts are no different.  Thankfully, there's an easy way to resolve this.  Each proxy contract points to am implementation contract and Etherscan has built in support for tracking this.  If you don't already see the `Read as Proxy` link under the list of contract options on Etherscan, click on the "More Options" link, and then click on "Is this a proxy?" ![Is this a proxy link](./dao_notifications/proxy.png).  Etherscan will take you to a "Proxy Contract Verification" page where it will display the implementation contract that it believes your proxy contract is leveraging.  Click verify and hopefully it will pop up a modal saying it's successfully verified.
+Looking at the contract events in Etherscan seems to confirm that these events line up with votes being created and cast by the DAO but the event names are meaningless.  The clue is the word "proxy" in the contract.  Aragon uses proxy contracts to ensure upgradeability and my DAO's contracts are no different.  Thankfully, there's an easy way to resolve this.  Each proxy contract points to am implementation contract and Etherscan has built in support for tracking this.  If you don't already see the `Read as Proxy` link under the list of contract options on Etherscan, click on the "More Options" link, and then click on "Is this a proxy?" ![Is this a proxy link](./dao_notifications/proxy.png)  Etherscan will take you to a "Proxy Contract Verification" page where it will display the implementation contract that it believes your proxy contract is leveraging.  Click verify and hopefully it will pop up a modal saying it's successfully verified.
 
 Once done, go back to the main contract page and click the "Read as Proxy" link.  Then, you'll see a message appear saying "ABI for the implementation contract at 0x1234..."  Click that link and then grab the contract ABI from there.  That's where the events we're looking for are found.  Below is the exact event you're looking for.
 ```js
