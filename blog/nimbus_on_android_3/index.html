@@ -20,38 +20,7 @@
 <span class="token function">git</span> clone https://github.com/status-im/nim-beacon-chain.git</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
 <p>At present, the Nimbus Eth2 client has both the beacon node and validator client combined in one application so to start participating in the Eth2 network as a validator, we follow the same process as last time.</p>
 <p>Run <code class="language-text">make witti</code> to connect to the Witti multiclient testnet.  If you see something like this error:
-<span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 500px;"
-    >
-      <a
-    class="gatsby-resp-image-link"
-    href="/static/2f24e71dc9ebdf675f1a6bb7b0745f20/e3829/testnet_error.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-    <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 34.400000000000006%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAC4jAAAuIwF4pT92AAABJUlEQVQozz2R6VbCUAyE78EDRYUqpSLoE6hYFoWu0LK6vP/7xHzR64+c3CTNZGbqhvlRxpsPGRZHifKDDLK99FeNjKqzve/KkwWzKDtIXJysH8xL6S4qi4tpJu5pJe55Le423RlAuG4013Kz3sn121bo+16o88vFRjqzwqI7rwywMyvlaqn9pJCWB+2/13Yx/GNFpvYBsGfOG0UDZcphGNMjINF6ScXx8b1KjlXWZPtpb4CROa6/FOyoC3vp6eGeLqGGGkACQhar2mYOgMfmW0bl2bx8UBADVK8mKjlaVgbqPYYVxwYKGmuPgDE1M+elYW47+fWIbB5NUwleM6uZB+oZ/uGb/4aaHf+TDBBfYMU1rpOt1jcKzBLtkb1cdsgcaSf5P5kfIj/UHd/w8bIAAAAASUVORK5CYII='); background-size: cover; display: block;"
-  ></span>
-  <img
-        class="gatsby-resp-image-image"
-        alt="testnet_error"
-        title="testnet_error"
-        src="/static/2f24e71dc9ebdf675f1a6bb7b0745f20/0b533/testnet_error.png"
-        srcset="/static/2f24e71dc9ebdf675f1a6bb7b0745f20/fac75/testnet_error.png 125w,
-/static/2f24e71dc9ebdf675f1a6bb7b0745f20/63868/testnet_error.png 250w,
-/static/2f24e71dc9ebdf675f1a6bb7b0745f20/0b533/testnet_error.png 500w,
-/static/2f24e71dc9ebdf675f1a6bb7b0745f20/1d69c/testnet_error.png 750w,
-/static/2f24e71dc9ebdf675f1a6bb7b0745f20/00d43/testnet_error.png 1000w,
-/static/2f24e71dc9ebdf675f1a6bb7b0745f20/e3829/testnet_error.png 1077w"
-        sizes="(max-width: 500px) 100vw, 500px"
-        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-        loading="lazy"
-      />
-  </a>
-    </span>
+<img src="./nimbus3/testnet_error.png" alt="testnet_error">
 then do the below to resolve the error.  You may have to do it twice if Termux throws additional errors around not being able to delete certain subdirectories.</p>
 <div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token function">rm</span> -rf build/eth2-testnets</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p>The <code class="language-text">make witti</code> script removes some old build directories as part of the <code class="language-text">make</code> recipe and Termux has certain limitations when running a <code class="language-text">proot</code> that disallow scripts from this action so you may have to do it manually.</p>
@@ -101,26 +70,26 @@ then do the below to resolve the error.  You may have to do it twice if Termux t
     >
       <a
     class="gatsby-resp-image-link"
-    href="/static/72854f06df275cebd4f4420bd0ef0ebd/d53ff/get_ready.png"
+    href="/static/fa06b63d41291de2b3e0961d9092a50a/d53ff/get_ready_2.png"
     style="display: block"
     target="_blank"
     rel="noopener"
   >
     <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 88.8%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAC4jAAAuIwF4pT92AAADFklEQVQ4y61U2ZbqOAx06CZ7nM3ZSAIJIQkQmqWXc+Y+zP9/Vo1kLnc+YOZBKMZyqVSSLR6PB5Zl0TaOI4ZhQNM0yPMcn5+fOJ/P2k6nE6qqQhzHKMsSu91O/8fW972OT9MUgn8YpOs6HI9HbdvtFofDQRvvsd9sNn/A+ExRFDoR7zNYXddo2xaCMzHINE16k8EYnLPyf+wZxPd9SCkRBIE+vN/vNUve53hea8Asy3RmzsJgX19fmOdZl8/+4+NDA7NnWe73u7bXmv3tdtOeiQku58WEA1i3y+WiAxjwdYgTvADZc9lMJIoirS33guPFeBg1ANPlZnCg4zi6LE7G5bAU/f6ZkHW7Xq/6zCvZz88PfV90MvH4fmj02/2mDzMIZ5rHGb/++kUsQniuizhMEJCOvu8hSWKEodSW54rWEWzb0nvCyAVUptC1HbbNFnX1ZNkO1LVui7LoUNYVsjbB5YOTThinhfTuid03EVigVAMhDBiGCWGuExg2LQIBQWZIgfXagRVHkEmLWC7wZAM7ixCrHnF0QRROCOUBaXKDSj+J6QzP29IUDBCxvMIJa1hRCSdp4CU7WudYZxJmGWFdBrBqBVulsFyFtyjAW+nhLZdYZR7cSkEGWwRy0qDCLSsa0iPaekGRHcgmJGmPrNyjKEdkxUBGbLIeu+5KpVJc2aPdTWjaI7HsYZmKyl1R2VSl8AVczyJhQxoBHlyfBDYxDzSLNAF912I555inCI/7Ae25xXCcsBz/Rrc/I+wCkoQmwy5hWjFE6B+pix1cdw/botJp471xYA8m/MGHWbiwNytk9QbSH7B2SwIY4XtnInKAF3UIY2KaftFEXCGi+ELsSFz1Tf6uRZfRDLvK4GUVCX6iJBvKXlCzYpjrEKaZkMnnNzX1/V3CsnIyBWFZIf1BIr8RK1vqQMsM4NoKrpOB9103ohiDbIXV6ukNQ9CZf/1qJfS3uN+vNP0nuik1PQI5dcqhl6WkrnmkaaB1zWh4+ebwi8NXjR8LpdSfF4ivXpKkpL+km0K3xKWbwIHPLv1HY7D/Bei3/QN+Gsb5Iv6JvAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    style="padding-bottom: 62.4%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAC4jAAAuIwF4pT92AAACGUlEQVQoz61T0XKbMBDEISAMEhISkgBjmwAmxIlpJ2kmnf7/f20PkudOHvqwc+gQd7t7R/D29obX11csy4LD4YD22OJ0OmHoR/z++EBZGshcwjuPPM9RFGrLaV1AKYmmqeGc3fLWlghYG6OhQmN/IYwYHoat6Dj36MeBLjVwlYNrSjxdX6hZh2G4bPH6vKDrRnAuEQQBYYfgPhLYsR3CbIc7HmCXBQhDhsRISH2EkS/gqkZWK/h6hjULSj1vaKp3VP4dUo1I0wMVPiEo+A1MWkTagBmPtGywX89WIa4KggJrLDUwiBODkKTdVxKhzXFnBTJfQfAHkv9MBR8QZK6Fs1fU/gpnLrD6EUp3MP6Mshqg3ZnQoyg7krmQPRPlTzicJ9TtRN51iGPzKXeTrQLkisN7C20UpBQQGcd8eSJPJxpOh6fHCvPs8GOZ0L106C8TrvMfHPsevEnBEokoUmTVHoFIRyRJS8kWceRIlsVdc49sSCAGDuZjiPMO1bFGzjtEoiICM8m7Ic0GZOUJpiRfyw9ie0OgimdagZ+U+LXFNSn1BHbQEL6lVZmpWQPGmk0aiwokzNJ5jSWS2BKRAvv9emddG3oRhpyQ0Qc0iHiln39eZjSImAYTiy9/voHb7Ur+TLSgFcGTlJQWvCEvObGVxFqhqjwN5LwtvtZ6i865LRqaftu2WxSCGq9/yvqgtfk+i3+Bc/5/Cn3hL/hyH2aZeccFAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
         alt="Deposit made!"
         title="Deposit made!"
-        src="/static/72854f06df275cebd4f4420bd0ef0ebd/0b533/get_ready.png"
-        srcset="/static/72854f06df275cebd4f4420bd0ef0ebd/fac75/get_ready.png 125w,
-/static/72854f06df275cebd4f4420bd0ef0ebd/63868/get_ready.png 250w,
-/static/72854f06df275cebd4f4420bd0ef0ebd/0b533/get_ready.png 500w,
-/static/72854f06df275cebd4f4420bd0ef0ebd/1d69c/get_ready.png 750w,
-/static/72854f06df275cebd4f4420bd0ef0ebd/00d43/get_ready.png 1000w,
-/static/72854f06df275cebd4f4420bd0ef0ebd/d53ff/get_ready.png 1068w"
+        src="/static/fa06b63d41291de2b3e0961d9092a50a/0b533/get_ready_2.png"
+        srcset="/static/fa06b63d41291de2b3e0961d9092a50a/fac75/get_ready_2.png 125w,
+/static/fa06b63d41291de2b3e0961d9092a50a/63868/get_ready_2.png 250w,
+/static/fa06b63d41291de2b3e0961d9092a50a/0b533/get_ready_2.png 500w,
+/static/fa06b63d41291de2b3e0961d9092a50a/1d69c/get_ready_2.png 750w,
+/static/fa06b63d41291de2b3e0961d9092a50a/00d43/get_ready_2.png 1000w,
+/static/fa06b63d41291de2b3e0961d9092a50a/d53ff/get_ready_2.png 1068w"
         sizes="(max-width: 500px) 100vw, 500px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
