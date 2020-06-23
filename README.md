@@ -1,1 +1,0 @@
-Personal blog derived from the [Julia starter](https://www.gatsbyjs.org/starters/niklasmtj/gatsby-starter-julia/)
