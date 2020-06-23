@@ -49,7 +49,7 @@ As a reminder, to be a validator on Eth2, you need to deposit 32 Eth into the va
 3.  If that's not your cup of tea, ask around the [Nimbus discord](https://discord.gg/BbykQm) and someone can probably hook you up.
 
 Once you've got your GoEth, paste the private key associated with that account into Termux.  Make sure your key is in hexidecimal format and put 0x in front of it like *0xmyHexidecimalPrivateKey*.  If alll goes well, you should see:
-![Deposit made!](./nimbus3/
+![Deposit made!](./nimbus3/get_ready.png)
 
 Once your transaction is successful, hit enter and you are officially able to start helping build the Eth2 (testnet) consensus.  Welcome to the future!
 ![Launching Beacon Node!](./nimbus3/launching_beacon_node.png)
