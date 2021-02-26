@@ -1,9 +1,10 @@
 {
-  "name": "eth.taxi",
+  "name": "web3.ninja",
   "private": true,
-  "description": "come take a ride",
+  "description": "wa-ta",
   "version": "0.1.0",
   "author": "acolytec3",
+  "homepage": "/web3.ninja",
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
