@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `eth.taxi`,
-    subtitle: `Need a ride?`,
-    description: `Catch a cab to somewhere`,
+    title: `web3.ninja`,
+    subtitle: `WA-TAH!`,
+    description: `skulking the depths of web3`,
     author: `acolytec3`,
   },
   plugins: [
@@ -59,8 +59,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `eth.taxi`,
-        short_name: `taxi`,
+        name: `web3.ninja`,
+        short_name: `ninja`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
